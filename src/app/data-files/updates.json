@@ -1,0 +1,16 @@
+{
+    "update": {
+        "dateUpdated": "February 7, 2021",
+        "timeUpdated": "7:00PM EST",
+        "casesToday": "3,203",
+        "totalCases": "804,260",
+        "activeCases": "44,727",
+        "totalRecovered": "738,766",
+        "deathsToday": "65",
+        "totalDeaths": "20,767",
+        "testsPerformedToday": "109,982",
+        "totalTestsPerformed": "22,255,255",
+        "percentPositiveTotal": "3.8%",
+        "testsPerformedPerMillion": "585,584"
+    }
+}
