@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+
 import { update } from './data-files/updates.json';
 import { ontario } from './data-files/ontario.json';
 import { ltcData } from './data-files/ltc.json';

@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { LtcPagePageRoutingModule } from './ltc-page-routing.module';
 
 import { LtcPagePage } from './ltc-page.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LtcPagePageRoutingModule
+    LtcPagePageRoutingModule,
+    ComponentsModule
   ],
   declarations: [LtcPagePage]
 })

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { MessageShareService } from '../message-share.service'; 
 
 @Component({
   selector: 'app-tab2',
@@ -7,6 +9,22 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor(private messageShare : MessageShareService, private router : Router) {}
+  
+  message : any;
+
+  ngOnInit() {
+    this.messageShare.sharedMessage.subscribe(
+      message => this.message = message
+    );
+  }
+
+  goLTCPage() {
+    this.router.navigate(['ltc-page']).then(nav => {
+      console.log(nav);
+    }, err => {
+      console.log(err);
+    });
+  }
 
 }

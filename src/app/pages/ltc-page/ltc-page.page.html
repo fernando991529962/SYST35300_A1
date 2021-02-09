@@ -1,9 +1,14 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>ltcPage</ion-title>
+    <ion-title>Long-Term-Care Home Data</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text="Back"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <app-case-status></app-case-status>
+  <ion-input [(ngModel)]='message'></ion-input>
+  <button (click)='sendMessage()'>Send Message</button>
 </ion-content>
