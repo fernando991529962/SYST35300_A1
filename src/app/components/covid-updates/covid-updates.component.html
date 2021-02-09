@@ -1,3 +1,44 @@
-<p>
-  covid-updates works!
-</p>
+<h1>Covid-19 Key Updates</h1>
+<h4>As of {{canadaStatusUpdate.dateUpdated}} - {{canadaStatusUpdate.timeUpdated}}</h4>
+<table>
+  <tr>
+    <th>Cases Today</th>
+    <td>{{canadaStatusUpdate.casesToday}}</td>
+  </tr>
+  <tr>
+    <th>Total Cases</th>
+    <td>{{canadaStatusUpdate.totalCases}}</td>
+  </tr>
+  <tr>
+    <th>Active Cases</th>
+    <td>{{canadaStatusUpdate.activeCases}}</td>
+  </tr>
+  <tr>
+    <th>Total Recovered</th>
+    <td>{{canadaStatusUpdate.totalRecovered}}</td>
+  </tr>
+  <tr>
+    <th>Deaths Today</th>
+    <td>{{canadaStatusUpdate.deathsToday}}</td>
+  </tr>
+  <tr>
+    <th>Total Deaths</th>
+    <td>{{canadaStatusUpdate.totalDeaths}}</td>
+  </tr>
+  <tr>
+    <th>Tests Today</th>
+    <td>{{canadaStatusUpdate.testsPerformedToday}}</td>
+  </tr>
+  <tr>
+    <th>Total Tested</th>
+    <td>{{canadaStatusUpdate.totalTestsPerformed}}</td>
+  </tr>
+  <tr>
+    <th>Percent Positive</th>
+    <td>{{canadaStatusUpdate.percentPositiveTotal}}</td>
+  </tr>
+  <tr>
+    <th>Tests Per Million</th>
+    <td>{{canadaStatusUpdate.testsPerformedPerMillion}}</td>
+  </tr>
+</table>

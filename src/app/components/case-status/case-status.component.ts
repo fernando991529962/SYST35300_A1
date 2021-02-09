@@ -9,11 +9,10 @@ import { LoadCovidDataService } from 'src/app/load-covid-data.service';
 export class CaseStatusComponent implements OnInit {
 
   constructor(private loadData : LoadCovidDataService) { }
-
-  myUpdate: object = {};
+  
+  ontarioCaseStatus: object = {};
 
   ngOnInit() {
-    this.myUpdate = this.loadData.loadUpdate();
+    this.ontarioCaseStatus = this.loadData.loadOntarioCaseStatus();
   }
-
 }

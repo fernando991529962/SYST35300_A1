@@ -1,4 +1,28 @@
-<p>
-  case-status works!
-  {{myUpdate.dateUpdated}}
-</p>
+<h1>Ontario Status of Cases</h1>
+<h4>As of {{ontarioCaseStatus.dateUpdated}} - {{ontarioCaseStatus.timeUpdated}}</h4>
+<table>
+  <tr>
+    <th>Total Cases</th>
+    <td>{{ontarioCaseStatus.totalCases}}</td>
+  </tr>
+  <tr>
+    <th>Resolved</th>
+    <td>{{ontarioCaseStatus.resolved}}</td>
+  </tr>
+  <tr>
+    <th>Deaths</th>
+    <td>{{ontarioCaseStatus.deaths}}</td>
+  </tr>
+  <tr>
+    <th>Hospitalized</th>
+    <td>{{ontarioCaseStatus.hospitalized}}</td>
+  </tr>
+  <tr>
+    <th>In ICU</th>
+    <td>{{ontarioCaseStatus.inICU}}</td>
+  </tr>
+  <tr>
+    <th>On Ventilator</th>
+    <td>{{ontarioCaseStatus.onVentilator}}</td>
+  </tr>
+</table>

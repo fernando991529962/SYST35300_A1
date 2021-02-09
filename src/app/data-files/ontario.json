@@ -1,0 +1,12 @@
+{
+    "ontario": {
+        "dateUpdated": "February 8, 2021",
+        "timeUpdated": "10:30AM EST",
+        "totalCases": "279,472",
+        "resolved": "258,603",
+        "deaths": "6,538",
+        "hospitalized": "901",
+        "inICU": "335",
+        "onVentilator": "226"
+    }
+}
