@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
+import { LoadCovidDataService } from '../load-covid-data.service';
 import { MessageShareService } from '../message-share.service'; 
 
 @Component({
@@ -9,18 +10,25 @@ import { MessageShareService } from '../message-share.service';
 })
 export class Tab2Page {
 
-  constructor(private messageShare : MessageShareService, private router : Router) {}
+  constructor(private messageShare : MessageShareService, private loadData : LoadCovidDataService, private router : Router) {}
   
+  sendData : NavigationExtras;
   message : any;
+  ltcData : object = {};
+
 
   ngOnInit() {
+    this.ltcData = this.loadData.loadLTCHomeData();
+
     this.messageShare.sharedMessage.subscribe(
       message => this.message = message
     );
   }
 
-  goLTCPage() {
-    this.router.navigate(['ltc-page']).then(nav => {
+  goLTCPage(dailyLtcData) {
+    this.sendData = { state: { myLtcData : dailyLtcData } };
+
+    this.router.navigate(['ltc-page'], this.sendData).then(nav => {
       console.log(nav);
     }, err => {
       console.log(err);

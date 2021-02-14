@@ -8,6 +8,18 @@
 
 <ion-content [fullscreen]="true">
   <app-case-status></app-case-status>
-  <br>{{message}}<br><br>
-  <ion-button (click)="goLTCPage()">LTC Page</ion-button>
+
+  <br>
+  <div id='msg'>
+  <h4>Message:</h4>
+  <p>{{message}}</p>
+  </div><br>
+
+  
+  <ion-list>
+    <ion-list-header>LTC Home Data</ion-list-header>
+    <ion-item *ngFor="let dailyLtcData of ltcData">
+      <ion-button color='success' (click)="goLTCPage(dailyLtcData)">{{dailyLtcData.Report_Data_Extracted}}</ion-button>
+    </ion-item>
+  </ion-list>
 </ion-content>

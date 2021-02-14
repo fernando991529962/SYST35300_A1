@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Long-Term-Care Home Data</ion-title>
+    <ion-title>LTC Data</ion-title>
     <ion-buttons slot="start">
       <ion-back-button text="Back"></ion-back-button>
     </ion-buttons>
@@ -9,6 +9,48 @@
 
 <ion-content>
   <app-case-status></app-case-status>
+  <br>
+  <div id='ltc' *ngIf='ltcData'>
+    <h4>Long Term Care Home Data</h4>
+    <table>
+      <tr>
+        <th>Date Reported</th>
+        <td>{{ltcData.Report_Data_Extracted}}</td>
+      </tr>
+      <tr>
+        <th>Active Outbreaks</th>
+        <td>{{ltcData.LTC_Homes_with_Active_Outbreak}}</td>
+      </tr>
+      <tr>
+        <th>Resolved Outbreak</th>
+        <td>{{ltcData.LTC_Homes_with_Resolved_Outbreak}}</td>
+      </tr>
+      <tr>
+        <th>Active Resident Cases</th>
+        <td>{{ltcData.Confirmed_Active_LTC_Resident_Cases}}</td>
+      </tr>
+      <tr>
+        <th>Active Worker Cases</th>
+        <td>{{ltcData.Confirmed_Active_LTC_HCW_Cases}}</td>
+      </tr>
+      <tr>
+        <th>Total Resident Deaths</th>
+        <td>{{ltcData.Total_LTC_Resident_Deaths}}</td>
+      </tr>
+      <tr>
+        <th>Total Worker Deaths</th>
+        <td>{{ltcData.Total_LTC_HCW_Deaths}}</td>
+      </tr>
+      <tr>
+        <th>Outbreaks W/O Cases</th>
+        <td>{{ltcData.Active_Outbreaks_with_No_Resident_Cases}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <br>
+
   <ion-input [(ngModel)]='message'></ion-input>
   <button (click)='sendMessage()'>Send Message</button>
+  <br><br>
 </ion-content>

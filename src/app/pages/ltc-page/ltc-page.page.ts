@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MessageShareService } from 'src/app/message-share.service';
 
 @Component({
@@ -8,9 +9,14 @@ import { MessageShareService } from 'src/app/message-share.service';
 })
 export class LtcPagePage implements OnInit {
 
-  constructor(private messageShare : MessageShareService) { }
-
+  ltcData : object;
   message : any;
+
+  constructor(private messageShare : MessageShareService, private router : Router) {
+    if (this.router.getCurrentNavigation().extras.state) {
+      this.ltcData = this.router.getCurrentNavigation().extras.state.myLtcData;
+    }
+   }
 
   ngOnInit() {
     this.messageShare.sharedMessage.subscribe(
@@ -21,5 +27,4 @@ export class LtcPagePage implements OnInit {
   sendMessage() {
     this.messageShare.setMessage(this.message);
   }
-
 }
